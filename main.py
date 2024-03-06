@@ -39,10 +39,13 @@ if __name__ == "__main__":
         print("2: White bell with black background")
         sys.exit(1)
 
+    # path to the file location
+    script_path = os.path.dirname(os.path.realpath(__file__))
+
     if sys.argv[1] == "1":
-        icon_path = "black_bell_white_back.png"
+        icon_path = os.path.join(script_path, "black_bell_white_back.png")
     elif sys.argv[1] == "2":
-        icon_path = "white_bell_black_back.png"
+        icon_path = os.path.join(script_path, "white_bell_black_back.png")
     else:
         print(f"Usage: {sys.argv[0]} [1 | 2]")
         print("1: Black bell with white background")
